@@ -122,3 +122,16 @@ Installation of this project is pretty easy. Please do follow the following step
 ```bash
     http://localhost:5000/
 ```
+
+## Common Errors and it's solutions:
+
+### Error-1 : 
+### model_config = json.loads(model_config.decode('utf-8'))
+### AttributeError: 'str' object has no attribute 'decode' 
+
+### Solution-1 :
+```bash
+  Go to /env/lib/python3.6/site-packages/keras/models.py
+  Replace the model_config = json.loads(model_config.decode('utf-8'))
+  with model_config = json.loads(model_config)
+```
